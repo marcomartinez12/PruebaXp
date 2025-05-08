@@ -1,0 +1,285 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #f39c12;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --danger-color: #e74c3c;
+    --text-color: #333;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f5f7fa;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: var(--shadow);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Chat section */
+.chat-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.chat-box {
+    padding: 1.5rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.chat-message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+
+.chat-message.bot {
+    background-color: var(--light-color);
+    border-left: 4px solid var(--primary-color);
+}
+
+.chat-message.user {
+    background-color: var(--primary-color);
+    color: white;
+    border-left: 4px solid var(--secondary-color);
+    text-align: right;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+}
+
+.teams-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.teams-input input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.teams-input span {
+    margin: 0 1rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+button {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Results section */
+.results-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.prediction-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.match-info {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin-top: 0.5rem;
+}
+
+.prediction-graph {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.team {
+    flex: 1;
+    text-align: center;
+    padding: 0 0.5rem;
+}
+
+.team-name {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.probability-bar {
+    height: 30px;
+    background-color: #eee;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.probability-fill {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.probability-fill.draw-fill {
+    background-color: var(--accent-color);
+}
+
+.team2 .probability-fill {
+    background-color: var(--secondary-color);
+}
+
+.probability-value {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.recommendation-box {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.stats-comparison {
+    margin-top: 2rem;
+}
+
+.stats-comparison h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--dark-color);
+    color: white;
+    margin-top: 2rem;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .teams-input {
+        flex-direction: column;
+    }
+    
+    .teams-input input {
+        margin-bottom: 1rem;
+    }
+    
+    .teams-input span {
+        margin: 0.5rem 0;
+    }
+    
+    .prediction-graph {
+        flex-direction: column;
+    }
+    
+    .team {
+        margin-bottom: 1.5rem;
+    }
+}

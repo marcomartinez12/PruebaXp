@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XplainBet - Predicción de Apuestas</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" href="../static/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script defer src="static/js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="static/img/logoxp.png" alt="XplainBet Logo" class="logo">
+            <h1>XplainBet</h1>
+        </div>
+        <p class="tagline">Predicciones inteligentes por IA</p>
+    </header>
+
+    <main>
+        <section class="chat-container">
+            <div class="chat-box" id="chatBox">
+                <div class="chat-message bot">
+                    <p>¡Hola! Soy XplainBet, tu analista de apuestas. Dime dos equipos y te daré mi predicción basada en estadísticas.</p>
+                </div>
+            </div>
+            
+            <div class="input-form">
+                <div class="teams-input">
+                    <input type="text" id="team1" placeholder="Equipo 1" required>
+                    <span>VS</span>
+                    <input type="text" id="team2" placeholder="Equipo 2" required>
+                </div>
+                <button id="predictBtn">Predecir</button>
+            </div>
+        </section>
+
+        <section class="results-container" id="resultsContainer" style="display: none;">
+            <div class="prediction-header">
+                <h2>Predicción del Encuentro</h2>
+                <span class="match-info" id="matchInfo">Barcelona vs Real Madrid</span>
+            </div>
+            
+            <div class="prediction-graph">
+                <div class="team team1">
+                    <div class="team-name" id="predTeam1Name">Barcelona</div>
+                    <div class="probability-bar">
+                        <div class="probability-fill" id="team1ProbFill"></div>
+                        <span class="probability-value" id="team1Prob">0%</span>
+                    </div>
+                </div>
+                
+                <div class="team draw">
+                    <div class="team-name">Empate</div>
+                    <div class="probability-bar">
+                        <div class="probability-fill draw-fill" id="drawProbFill"></div>
+                        <span class="probability-value" id="drawProb">0%</span>
+                    </div>
+                </div>
+                
+                <div class="team team2">
+                    <div class="team-name" id="predTeam2Name">Real Madrid</div>
+                    <div class="probability-bar">
+                        <div class="probability-fill" id="team2ProbFill"></div>
+                        <span class="probability-value" id="team2Prob">0%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recommendation-box" id="recommendationBox">
+                Apuesta recomendada: Victoria de Barcelona
+            </div>
+            
+            <div class="stats-comparison">
+                <h3>Estadísticas Clave</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="statsTeam1">Barcelona</th>
+                            <th>Estadística</th>
+                            <th id="statsTeam2">Real Madrid</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="team1Form">W W D L W</td>
+                            <td>Últimos 5 partidos</td>
+                            <td id="team2Form">W W W D L</td>
+                        </tr>
+                        <tr>
+                            <td id="team1Goals">2.3</td>
+                            <td>Goles/partido</td>
+                            <td id="team2Goals">1.8</td>
+                        </tr>
+                        <tr>
+                            <td id="team1Possession">58%</td>
+                            <td>Posesión</td>
+                            <td id="team2Possession">54%</td>
+                        </tr>
+                        <tr>
+                            <td id="team1Corners">5.7</td>
+                            <td>Córners/partido</td>
+                            <td id="team2Corners">6.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 XplainBet - Análisis de apuestas con inteligencia artificial</p>
+        <p class="disclaimer">La información proporcionada es solo con fines informativos. Apuesta responsablemente.</p>
+    </footer>
+
+</body>
+</html>
